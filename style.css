@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .3s linear;
+    list-style: none;
+}
+
+:root {
+    --primary-color: #9BF00B;
+    --grey: #777777;
+    --light-grey: #777777;
+    --dark: #0C0C0C;
+    --white: #FFF;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-padding-top: 7rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+header {
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 100px;
+}
+
+header .logo a img {width: 100%;}
+
+header .menu .navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header .menu .navbar  li a {
+    padding: .8rem 1rem;
+    font-size: 1.4rem;
+    color: var(--white);
+    font-weight: 600;
+}
+
+#menu-mobile {
+    color: var(--primary-color);
+    border: .1rem solid var(--white);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-mobile .line {
+    width: 20px;
+    height: 2px;
+    background-color: var(--white);
+    border: .1rem solid var(--light-grey);
+    margin: .4rem auto;
+}
+
+header .disponibilities a {
+    background-color: var(--primary-color);
+    color: var(--dark);
+    padding: 1rem;
+    font-weight: bolder;
+    font: 2rem;
+}
+
+.home {
+    padding: 20rem;
+    background-image: url(./images/kali.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.area-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.area-main .content {
+    margin-top: -12rem;
+    text-align: center;
+}
+
+.area-main .content h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+
+}
+
+.area-main .content h2 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.area-main .content-bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: baseline;
+    position: absolute;
+    top: 0;
+    margin-top: 12rem;
+    text-align: center;
+}
+
+.area-main .content-bottom .description-content {
+    flex: 1;
+    text-align: start;
+}
+
+.area-main .content-bottom .description-content h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.area-main .content-bottom .description-content h2 span {
+    color: var(--white);
+}
+.area-main .content-bottom .description-content p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+.controle {
+    flex: 1;
+    margin-left: 4rem;
+}
+
+.home img {
+    width: 200px;
+}
+
+.players {
+    height: 540px;
+}
+
+.player-area {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,  minmax(200px, 1fr));
+}
+
+.player-item--farCry {
+    background-image: url(./images/farcry.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+.player-item--mexico {
+    background-image: url(./images/mexico.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+.player-item--mbape {
+    background-image: url(./images/mbape.svg);
+    background-position: bottom;
+    background-size: cover;
+}
+
+.player-item--minecraft {
+
+    background-image: url(./images/minecraft.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: .1rem solid var(--grey);
+}
+
+footer .logo {
+    width: 100px;
+}
+
+footer .logo a img {width: 100%;}
+
+@media screen and (max-width:991px ) {
+    html {
+        font-size: 55%;
+    }
+    header,footer {
+        padding: 3rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .area-main .content h1 {
+        font-size: 4rem;
+    }
+    .area-main .content-bottom {
+        flex-direction: column;
+        margin-top: 5rem;
+        align-items: center;
+    }
+    .controle {
+        order: -1;
+    }
+    header .menu .navbar {
+        display: none;
+    }
+    .player-area {
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .home img {
+        width: 150px;
+    }
+    .area-main .content h1 {
+        font-size: 2rem;
+    }
+    .area-main .content-bottom .description-content {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
